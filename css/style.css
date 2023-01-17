@@ -1,42 +1,71 @@
 /* Box Model Hack */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace !important;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
 }
 
 .clear {
-	clear: both;
+    clear: both;
 }
 
 /******************************************
 /* BASE STYLES
 /*******************************************/
 
-body {
+body {}
 
+h1 {
+    font-size: 3rem;
 }
 
+img {
+    max-width: 50%;
+}
+
+main {
+    height: 100vh;
+}
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+.splash {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
-footer {
+.splash>* {
+    flex: 0 0 50%;
+}
 
+.splash>div>p {
+    max-width: 75%;
+}
+
+.splash>div>button {
+    max-width: 50%;
 }
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary: #5e35b1;
+        --primary-hover: #673ab7;
+        --primary-focus: rgba(94, 53, 177, 0.25);
+        --primary-inverse: #FFF;
+    }
+}
