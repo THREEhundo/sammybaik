@@ -28,12 +28,9 @@ h1 {
     font-size: 3rem;
 }
 
-img {
-    max-width: 50%;
-}
-
 main {
     height: 100vh;
+    display: flex;
 }
 
 /******************************************
@@ -43,18 +40,41 @@ main {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .splash>* {
-    flex: 0 0 50%;
+    flex: auto;
 }
 
 .splash>div>p {
-    max-width: 75%;
+    /*max-width: 75%;*/
 }
 
 .splash>div>button {
+    /*max-width: 50%;*/
+}
+
+.splash img {
+    flex: 1 1 75%;
     max-width: 50%;
+}
+
+.text-container {
+    flex: 0 1 25%;
+}
+
+.nav-container {
+    flex-flow: row-reverse;
+}
+
+.icon-list {
+    flex-flow: column;
+    align-self: center;
+}
+
+.icon {
+    width: 25px;
 }
 
 /******************************************
@@ -67,5 +87,11 @@ main {
         --primary-hover: #673ab7;
         --primary-focus: rgba(94, 53, 177, 0.25);
         --primary-inverse: #FFF;
+    }
+}
+
+@media (max-width: 425px) {
+    .splash img {
+        max-width: 100%;
     }
 }
