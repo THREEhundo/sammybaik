@@ -47,14 +47,6 @@ main {
     flex: auto;
 }
 
-.splash>div>p {
-    /*max-width: 75%;*/
-}
-
-.splash>div>button {
-    /*max-width: 50%;*/
-}
-
 .splash img {
     flex: 1 1 75%;
     max-width: 50%;
@@ -90,7 +82,7 @@ main {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .splash img {
         max-width: 100%;
     }
