@@ -22,8 +22,6 @@
 /* BASE STYLES
 /*******************************************/
 
-body {}
-
 h1 {
     font-size: 3rem;
 }
@@ -31,6 +29,10 @@ h1 {
 main {
     height: 100vh;
     display: flex;
+}
+
+main+div {
+    height: 100vh;
 }
 
 /******************************************
@@ -67,6 +69,18 @@ main {
 
 .icon {
     width: 25px;
+}
+
+.port-container {
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.container>h2 {
+    color: #5e35b1;
 }
 
 /******************************************
