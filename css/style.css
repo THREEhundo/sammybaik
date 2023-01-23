@@ -2,6 +2,7 @@
 * {
 	box-sizing: border-box;
 	font-family: 'JetBrains Mono', monospace !important;
+	scroll-behavior: smooth;
 }
 
 /* Clear fix hack */
