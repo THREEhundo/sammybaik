@@ -132,7 +132,7 @@ main + div {
 
 .pop-out1 {
 	--c: #d8761b; /* the color */
-	--b: 0.1em; /* border length*/
+	--b: 0.2em; /* border length*/
 	--d: 20px; /* the cube depth */
 
 	--_s: calc(var(--d) + var(--b));
