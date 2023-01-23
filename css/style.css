@@ -1,21 +1,21 @@
 /* Box Model Hack */
 * {
-    box-sizing: border-box;
-    font-family: 'JetBrains Mono', monospace !important;
+	box-sizing: border-box;
+	font-family: 'JetBrains Mono', monospace !important;
 }
 
 /* Clear fix hack */
 .clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
+	content: '.';
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
 }
 
 .clear {
-    clear: both;
+	clear: both;
 }
 
 /******************************************
@@ -23,64 +23,156 @@
 /*******************************************/
 
 h1 {
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 main {
-    height: 100vh;
-    display: flex;
+	height: 100vh;
+	display: flex;
 }
 
-main+div {
-    height: 100vh;
+main + div {
+	height: 100vh;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
 .splash {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
 }
 
-.splash>* {
-    flex: auto;
+.splash > * {
+	flex: auto;
 }
 
 .splash img {
-    flex: 1 1 75%;
-    max-width: 50%;
+	flex: 1 1 75%;
+	max-width: 50%;
 }
 
 .text-container {
-    flex: 0 1 25%;
+	flex: 0 1 25%;
 }
 
 .nav-container {
-    flex-flow: row-reverse;
+	flex-flow: row-reverse;
 }
 
 .icon-list {
-    flex-flow: column;
-    align-self: center;
+	flex-flow: column;
+	align-self: center;
 }
 
 .icon {
-    width: 25px;
+	width: 25px;
 }
 
 .port-container {
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    align-items: center;
-    row-gap: 1rem;
+	justify-content: space-evenly;
+	justify-items: center;
+	align-content: space-evenly;
+	align-items: center;
+	row-gap: 1rem;
 }
 
-.container>h2 {
-    color: #5e35b1;
+.container > h2 {
+	color: #5e35b1;
+}
+
+.pop-out {
+	--c: #578ecf; /* the color */
+	--b: 0.2em; /* border length*/
+	--d: 20px; /* the cube depth */
+
+	--_s: calc(var(--d) + var(--b));
+	color: var(--c);
+	border: solid #0000;
+	border-width: var(--b) var(--_s) var(--_s) var(--b);
+	background: conic-gradient(
+				from -90deg at right var(--d) bottom var(--d),
+				#0000 90deg,
+				rgb(255 255 255 /0.3) 0 225deg,
+				rgb(255 255 255 /0.6) 0
+			)
+			border-box,
+		conic-gradient(
+				at right var(--_s) bottom var(--_s),
+				var(--c) 270deg,
+				#0000 0
+			)
+			100% 100% / calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+	transform: translate(var(--d), var(--d));
+	clip-path: polygon(
+		0% 0%,
+		calc(100% - var(--d)) 0%,
+		calc(100% - var(--d)) 0%,
+		calc(100% - var(--d)) calc(100% - var(--d)),
+		0 calc(100% - var(--d)),
+		0 calc(100% - var(--d))
+	);
+	transition: 0.5s;
+}
+
+.pop-out:hover {
+	transform: translate(0, 0);
+	clip-path: polygon(
+		0% 0%,
+		calc(100% - var(--d)) 0%,
+		100% var(--d),
+		100% 100%,
+		var(--d) 100%,
+		0 calc(100% - var(--d))
+	);
+}
+
+.pop-out1 {
+	--c: #d8761b; /* the color */
+	--b: 0.1em; /* border length*/
+	--d: 20px; /* the cube depth */
+
+	--_s: calc(var(--d) + var(--b));
+
+	color: var(--c);
+	border: solid #0000;
+	border-width: var(--b) var(--b) var(--_s) var(--_s);
+	background: conic-gradient(
+				at left var(--d) bottom var(--d),
+				#0000 90deg,
+				rgb(255 255 255 /0.3) 0 225deg,
+				rgb(255 255 255 /0.6) 0
+			)
+			border-box,
+		conic-gradient(
+				at left var(--_s) bottom var(--_s),
+				#0000 90deg,
+				var(--c) 0
+			)
+			0 100% / calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+	transform: translate(calc(var(--d) / -1), var(--d));
+	clip-path: polygon(
+		var(--d) 0%,
+		var(--d) 0%,
+		100% 0%,
+		100% calc(100% - var(--d)),
+		100% calc(100% - var(--d)),
+		var(--d) calc(100% - var(--d))
+	);
+	transition: 0.5s;
+}
+.pop-out1:hover {
+	transform: translate(0, 0);
+	clip-path: polygon(
+		0% var(--d),
+		var(--d) 0%,
+		100% 0%,
+		100% calc(100% - var(--d)),
+		calc(100% - var(--d)) 100%,
+		0% 100%
+	);
 }
 
 /******************************************
@@ -88,16 +180,16 @@ main+div {
 /*******************************************/
 
 @media only screen and (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --primary: #5e35b1;
-        --primary-hover: #673ab7;
-        --primary-focus: rgba(94, 53, 177, 0.25);
-        --primary-inverse: #FFF;
-    }
+	:root:not([data-theme='light']) {
+		--primary: #5e35b1;
+		--primary-hover: #673ab7;
+		--primary-focus: rgba(94, 53, 177, 0.25);
+		--primary-inverse: #fff;
+	}
 }
 
 @media (max-width: 426px) {
-    .splash img {
-        max-width: 100%;
-    }
+	.splash img {
+		max-width: 100%;
+	}
 }
