@@ -52,11 +52,12 @@ main + div {
 
 .splash img {
 	flex: 1 1 75%;
-	max-width: 50%;
+	max-width: 60%;
 }
 
 .text-container {
 	flex: 0 1 25%;
+	min-width: 200px;
 }
 
 .nav-container {
