@@ -1,232 +1,111 @@
 /* Box Model Hack */
 * {
 	box-sizing: border-box;
-	font-family: 'JetBrains Mono', monospace !important;
 	scroll-behavior: smooth;
 }
 
-/* Clear fix hack */
-.clearfix:after {
-	content: '.';
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
+html {
+	font-size: 16px;
 }
+/* Variables */
 
-.clear {
-	clear: both;
+:root {
+	--space-xxs: 0.25rem; /* 4px */
+	--space-xs: 0.5rem; /* 8px */
+	--space-sm: 1rem; /* 16px */
+	--space-md: 2rem; /* 32px */
+	--space-lg: 4rem; /* 64px */
 }
-
 /******************************************
 /* BASE STYLES
 /*******************************************/
+/*// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
 
-h1 {
-	font-size: 3rem;
+
+}*/
+
+body {
+	background-color: #212121;
+	color: #b6ce8d;
+	font-family: 'Urbanist', sans-serif;
+	font-weight: 100;
+	font-optical-sizing: auto;
+	font-style: normal;
+	padding: var(--space-sm);
 }
 
 main {
 	height: 100vh;
-	display: flex;
+	/*display: flex;*/
 }
 
 main + div {
 	height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'REM', sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+.rem-thin {
+	font-family: 'REM', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 100;
+	font-style: normal;
+}
+
+.rem-extralight {
+	font-family: 'REM', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 200;
+	font-style: normal;
+}
+
+.rem-light {
+	font-family: 'REM', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.rem-medium {
+	font-family: 'REM', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 500;
+	font-style: normal;
+}
+.rem-semibold {
+	font-family: 'REM', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+.rem-bold {
+	font-family: 'REM', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
 /******************************************
 /* LAYOUT
 /*******************************************/
-.splash {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	justify-content: center;
-}
-
-.splash > * {
-	flex: auto;
-}
-
-.splash img {
-	flex: 1 1 75%;
-	max-width: 60%;
-}
-
-.text-container {
-	flex: 0 1 25%;
-	min-width: 200px;
-}
-
-.nav-container {
-	flex-flow: row-reverse;
-}
-
-.icon-list {
-	flex-flow: column;
-	align-self: center;
-}
-
-.icon {
-	width: 25px;
-}
-
-.port-container {
-	justify-content: space-evenly;
-	justify-items: center;
-	align-content: space-evenly;
-	align-items: center;
-	row-gap: 1rem;
-}
-
-.container > h2 {
-	color: #5e35b1;
-}
-
-.pop-out {
-	--c: #578ecf; /* the color */
-	--b: 0.2em; /* border length*/
-	--d: 20px; /* the cube depth */
-
-	--_s: calc(var(--d) + var(--b));
-	color: var(--c);
-	border: solid #0000;
-	border-width: var(--b) var(--_s) var(--_s) var(--b);
-	background: conic-gradient(
-				from -90deg at right var(--d) bottom var(--d),
-				#0000 90deg,
-				rgb(255 255 255 /0.3) 0 225deg,
-				rgb(255 255 255 /0.6) 0
-			)
-			border-box,
-		conic-gradient(
-				at right var(--_s) bottom var(--_s),
-				var(--c) 270deg,
-				#0000 0
-			)
-			100% 100% / calc(100% - var(--b)) calc(100% - var(--b)) border-box;
-	transform: translate(var(--d), var(--d));
-	clip-path: polygon(
-		0% 0%,
-		calc(100% - var(--d)) 0%,
-		calc(100% - var(--d)) 0%,
-		calc(100% - var(--d)) calc(100% - var(--d)),
-		0 calc(100% - var(--d)),
-		0 calc(100% - var(--d))
-	);
-	transition: 0.5s;
-}
-
-.pop-out:hover {
-	transform: translate(0, 0);
-	clip-path: polygon(
-		0% 0%,
-		calc(100% - var(--d)) 0%,
-		100% var(--d),
-		100% 100%,
-		var(--d) 100%,
-		0 calc(100% - var(--d))
-	);
-}
-
-.pop-out1 {
-	--c: #d8761b; /* the color */
-	--b: 0.2em; /* border length*/
-	--d: 20px; /* the cube depth */
-
-	--_s: calc(var(--d) + var(--b));
-
-	color: var(--c);
-	border: solid #0000;
-	border-width: var(--b) var(--b) var(--_s) var(--_s);
-	background: conic-gradient(
-				at left var(--d) bottom var(--d),
-				#0000 90deg,
-				rgb(255 255 255 /0.3) 0 225deg,
-				rgb(255 255 255 /0.6) 0
-			)
-			border-box,
-		conic-gradient(
-				at left var(--_s) bottom var(--_s),
-				#0000 90deg,
-				var(--c) 0
-			)
-			0 100% / calc(100% - var(--b)) calc(100% - var(--b)) border-box;
-	transform: translate(calc(var(--d) / -1), var(--d));
-	clip-path: polygon(
-		var(--d) 0%,
-		var(--d) 0%,
-		100% 0%,
-		100% calc(100% - var(--d)),
-		100% calc(100% - var(--d)),
-		var(--d) calc(100% - var(--d))
-	);
-	transition: 0.5s;
-}
-.pop-out1:hover {
-	transform: translate(0, 0);
-	clip-path: polygon(
-		0% var(--d),
-		var(--d) 0%,
-		100% 0%,
-		100% calc(100% - var(--d)),
-		calc(100% - var(--d)) 100%,
-		0% 100%
-	);
-}
-
-.pop-out2 {
-	--c: #88b591; /* the color */
-	--b: 0.2em; /* border length*/
-	--d: 20px; /* the cube depth */
-
-	--_s: calc(var(--d) + var(--b));
-
-	color: var(--c);
-	border: solid #0000;
-	border-width: var(--b) var(--b) var(--_s) var(--_s);
-	background: conic-gradient(
-				at left var(--d) bottom var(--d),
-				#0000 90deg,
-				rgb(255 255 255 /0.3) 0 225deg,
-				rgb(255 255 255 /0.6) 0
-			)
-			border-box,
-		conic-gradient(
-				at left var(--_s) bottom var(--_s),
-				#0000 90deg,
-				var(--c) 0
-			)
-			0 100% / calc(100% - var(--b)) calc(100% - var(--b)) border-box;
-	transform: translate(calc(var(--d) / -1), var(--d));
-	clip-path: polygon(
-		var(--d) 0%,
-		var(--d) 0%,
-		100% 0%,
-		100% calc(100% - var(--d)),
-		100% calc(100% - var(--d)),
-		var(--d) calc(100% - var(--d))
-	);
-	transition: 0.5s;
-}
-.pop-out2:hover {
-	transform: translate(0, 0);
-	clip-path: polygon(
-		0% var(--d),
-		var(--d) 0%,
-		100% 0%,
-		100% calc(100% - var(--d)),
-		calc(100% - var(--d)) 100%,
-		0% 100%
-	);
-}
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
+/*
 @media only screen and (prefers-color-scheme: dark) {
 	:root:not([data-theme='light']) {
 		--primary: #5e35b1;
@@ -240,4 +119,4 @@ main + div {
 	.splash img {
 		max-width: 100%;
 	}
-}
+}*/
