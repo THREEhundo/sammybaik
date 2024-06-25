@@ -29,20 +29,16 @@ html {
 body {
 	background-color: #212121;
 	color: #b6ce8d;
-	font-family: 'Urbanist', sans-serif;
-	font-weight: 100;
+	font-family: 'REM', sans-serif;
+	font-weight: 200;
 	font-optical-sizing: auto;
 	font-style: normal;
 	padding: 0;
 }
 
-main {
-	height: 100vh;
-	/*display: flex;*/
-}
-
-main + div {
-	height: 100vh;
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 h1,
@@ -52,15 +48,25 @@ h4,
 h5,
 h6 {
 	font-family: 'REM', sans-serif;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 2rem;
+	letter-spacing: -0.13rem;
+	padding: 1rem 0;
+}
+
+h2 {
+	font-size: 0.77rem;
+	letter-spacing: -0.04rem;
+	font-weight: 300;
+	padding-bottom: 0.25rem;
 }
 
 ul {
 	list-style: none;
+	padding: 0;
 }
 
 .rem-thin {
@@ -114,36 +120,72 @@ nav {
 	width: 100%;
 }
 
-nav ::after,
-::before {
-	border: 0 solid #e5e7eb;
-}
-
 nav > ul {
 	margin: 0;
 	padding-left: var(--space-sm);
 	padding-right: var(--space-sm);
 	padding-top: var(--space-sm);
-
 	overflow: hidden;
-	/*width: 100%;*/
 	max-width: 100vw;
 }
 
 nav > ul > div {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: var(--space-sm);
+	padding-bottom: var(--space-xs);
 	border-bottom: 1px solid #b6ce8d;
 }
 
 nav > ul > li {
 	font-size: 01.2rem;
 }
+
+main > section {
+	padding-left: var(--space-sm);
+	padding-right: var(--space-sm);
+}
+
+.img-container {
+	width: 75%;
+	/*height: 75%;*/
+	padding-bottom: 1rem;
+}
+
+.img-container > img {
+	max-width: 100%;
+	height: 100%;
+	/*object-fit: contain;*/
+}
+/*#projects article {
+	display: flex;
+	align-items: center;
+}*/
+
+#projects h3 {
+	font-size: 2rem;
+	border-top: 1px solid #b6ce8d;
+}
+
+#projects ul {
+	padding-bottom: 3rem;
+}
+
+#projects ul li:last-of-type article h3 {
+	border-bottom: 1px solid #b6ce8d;
+}
+
+#projects span {
+	font-size: 1rem;
+	font-weight: 100;
+	vertical-align: super;
+}
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
 /*
+
+
 @media only screen and (prefers-color-scheme: dark) {
 	:root:not([data-theme='light']) {
 		--primary: #5e35b1;

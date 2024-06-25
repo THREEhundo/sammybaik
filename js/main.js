@@ -4,21 +4,18 @@
 ////3. font
 ////4. ACA & WACA
 ////5. Root spacing
-//6. navbar
-//		i.Home
-//		ii.Portfolio
-//		iii.About
-//		iv.Contact
-//		v.Blog
+////6. navbar
+////		i.Home
+////		iv.Contact
 
-//7. open navbar
-//		i.Home
-//		ii.Portfolio
-//		iii.About
-//		iv.Contact
-//		v.Blog
-//		vi.Additional Info
-//		vii.animation
+////7. open navbar
+////		i.Home
+////		ii.Portfolio
+////		iii.About
+////		iv.Contact
+////		v.Blog
+////		vi.Additional Info
+////		vii.animation
 
 //8. copy
 //		i.Mission statement
