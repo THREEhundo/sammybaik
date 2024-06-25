@@ -17,6 +17,12 @@
 ////		vi.Additional Info
 ////		vii.animation
 
+//	HTML STRUCTURE
+////		i.ATF
+////		ii.Projects
+//		iii.Collab
+//		iv.Footer
+
 //8. copy
 //		i.Mission statement
 //		ii.Latest Projects
