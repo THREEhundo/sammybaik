@@ -1,20 +1,20 @@
 1. HTML
-	- Semantic Elements
-	- WCAG Compliance
+	``- Semantic Elements``
+	``- WCAG Compliance``
 	- Add Attributes
 	- Meta Tags
 		- Keywords
 
 2. CSS
-	- Import Spacing Sheet
-	- Add spacing for mobile
+	``- Import Spacing Sheet``
+	``- Add spacing for mobile``
 	- Adjust Image placement
-	- Mobile
-		- Styling for Nav 
-		- Styling for ATF
-		- Styling for Projects
-		- Styling for Connect
-		- Styling for Footer
+	``- Mobile``
+		``- Styling for Nav ``
+		``- Styling for ATF``
+		``- Styling for Projects``
+		``- Styling for Connect``
+		``- Styling for Footer``
 	- Tablet
 		- Styling for Nav 
 		- Styling for ATF
