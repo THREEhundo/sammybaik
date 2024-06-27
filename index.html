@@ -21,25 +21,26 @@
 </head>
 
 <body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
         
 <nav class="" aria-label="Main Navigation">
-            <ul>
+            <ul  aria-label="Main Navigation">
                 <div>
-                    <li>Sammy Baik</li>
+                    <li href="#" aria-current="page">Sammy Baik</li>
                     <li><a href="mailto:samuelbaik87@gmail.com">Let's Connect</a></li>
                 </div>
             </ul>
         </nav>
-<main>
+<main id="main-content" tabindex="-1">
     <!-- ATF -->
 <section id="atf">
     <header><h1>I'm a Full-Stack Web Developer with an unabashed zeal for modular code. Currently building websites that are creative, performant, and accessible.</h1></header>
-    <div class="img-container"><img src="./assets/me.JPG" alt="Selfie of Sammy"></div>
+    <div class="img-container"><img src="./assets/me.JPG" alt="Sammy Baik smiling at the camera" width="300" height="400"></div>
 </section>
 <!-- Projects -->
 <section id="projects">
     <h2>RECENT PROJECTS</h2>
-    <ul>
+    <ol>
          <li>
             <article>
                <h3><span>01</span> SBK STUDIO</h3>
@@ -60,36 +61,44 @@
                 <h3><span>04</span> LEVEL GROUND</h3>
             </article>
         </li>
-    </ul>
+    </ol>
 </section>
+
+<!-- Let's Connect -->
 <section id="connect">
    <header>
         <h2>Let's Connect</h2>
         <h2>I'm always down to exploring new projects with people who dream big and aim high. Let's connect and see if I can help.</h2>
    </header>
-    <div>
-        <h2>Stack</h2>
-        <p>React</p>
-        <p>NextJs</p>
-        <p>Tailwind</p>
-        <p>Express</p>
-        <p>Vercel</p>
-    </div>
+</section>
+
+<!-- Tech Stack -->
+<section aria-labelledby="stack-heading">
+        <h2 id="stack-heading">Stack</h2>
+         <ul role="list">
+        <li>React</li>
+        <li>NextJs</li>
+        <li>Tailwind</li>
+        <li>Express</li>
+        <li>Vercel</li>
+    </ul>
 </section>
 </main>
+
+<!-- Footer -->
 <footer>
-    <ul>
+    <ul aria-label="Footer Links" role="list">
         <li>
              <a href="mailto:samuelbaik87@gmail.com">Email</a>
         </li>
         <li>
-            <a href="https://www.twitter.com/kenyadigitt" target="_blank">Twitter</a>
+            <a href="https://www.twitter.com/kenyadigitt" target="_blank" rel="noopener noreferrer">Twitter</a>
         </li>
         <li>
-            <a href="https://github.com/THREEhundo" target="_blank">Github</a>
+            <a href="https://github.com/THREEhundo" target="_blank" rel="noopener noreferrer">Github</a>
         </li>
         <li>
-            <a href="www.linkedin.com/in/samuel-baik" target="_blank">LinkedIn</a>
+            <a href="www.linkedin.com/in/samuel-baik" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </li>
         <li>
             <a href="#top">Back up ^</a>
