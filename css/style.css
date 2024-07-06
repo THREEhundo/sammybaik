@@ -39,6 +39,12 @@ main + div {
 /******************************************
 /* LAYOUT
 /*******************************************/
+
+.responsive-img {
+	object-fit: contain;
+	width: 100%;
+	height: auto;
+}
 .splash {
 	display: flex;
 	flex-flow: row wrap;
